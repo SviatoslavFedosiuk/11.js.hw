@@ -55,40 +55,21 @@ if (getTemperature < 0) {
 
 
 // 3
-// Створіть об’єкт "user", який буде мати властивості "name", "email", "password". Додайте метод "login", який буде перевіряти правильність введеного email та password.
+
 const user = {
-    name: "",
-    email: "",
-    password: "",
-    login: "",
-    newInformation(newName, newEmail, newPassword) {
-        this.name = newName;
-        this.email = newEmail;
-        this.password = newPassword;
-    }
+ name: "Yurii",
+ email: "test@example.com",
+ password: "qwerty123",
+ login(inputEmail, inputPassword) {
+ if (inputEmail === this.email && inputPassword === this.password) {
+return "Успішний вхід!";
+} else {
+return "Невірний email або пароль!";
 }
-function checkEmail(emails) {
-    if (emails.includes("@")) {
-        console.log("This email is correct");
-        
-    } else {
-        console.log("This email is wrong");
-        
-    }
-}
-
-function checkPassword(passwords) {
-    if (emails.length() < 8) {
-        console.log("Rewrite password");
-        
-    } else {
-        console.log("Correct password");
-        
-    }
-}
-user.newInformation("Sviatoslav", "fhufuh@4", "eeeeee")
-console.log(user);
-
+  },
+};
+console.log(user.login("test@example.com", "qwerty123")); 
+console.log(user.login("wrong@mail.com", "12345"));       
 
 // // 4
 
